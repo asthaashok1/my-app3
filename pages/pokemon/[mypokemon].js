@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card } from 'react-bootstrap';
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+
 const H1 = styled.h1`color: primary;`
  const My = styled.li`color: red;`
  const Bckclr = styled.body`background-color:powderblue;`
@@ -21,7 +22,7 @@ const PokemonPage = ({name, pokemon, error}) => {
         
         <Bckclr>
             <header className=" d-flex justify-content-center">
-        <Image className="img-fluid" src='/pkmn.png' width={100} height={77} />
+        <Image className="img-fluid" src='/pkmn.png' alt="Pokemon" width={100} height={77} />
         <Card>
            <h1 className="text-success">SELECTED POKEMON</h1>
        </Card>
