@@ -22,8 +22,8 @@ const PokemonPage = ({name, pokemon, error}) => {
         <Bckclr>
             <header className=" d-flex justify-content-center">
         <Image className="img-fluid" src='/pkmn.png' width={100} height={77} />
-        <Card className="&apos;text-success&apos;">
-           <h1>Selected pokemon's different image</h1>
+        <Card>
+           <h1 className="text-success">SELECTED POKEMON</h1>
        </Card>
         </header>
         <H1> {pokemon?.name}</H1>
