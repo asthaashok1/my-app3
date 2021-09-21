@@ -16,17 +16,13 @@ const PokemonPage = ({name, pokemon, error}) => {
     <div><h1 className="text-success">Pokemon Not Found</h1>
     
     
-    </div>:
-   
-
-        
-        
+    </div>:   
     <div align="center">
         
         <Bckclr>
             <header className=" d-flex justify-content-center">
         <Image className="img-fluid" src='/pkmn.png' width={100} height={77} />
-       <Card className="text-success">
+        <Card className="text-primary">
            <h1>Selected pokemon's different image</h1>
        </Card>
         </header>
