@@ -28,14 +28,14 @@ useEffect( ()=>
 
 
            return(
-            <div>
-              <body>
+            <div className="back_img"  >
+              <body >
             {pokemon.map(p => (
              
-                <div key= {p}  >
+                <div key= {p} className="d-flex justify-content-center" >
                  
                      <button  type="button"
-  className="btn btn-outline-primary btn-rounded col-sm-1 col-xs-1 col-md-1 col-lg-1 d-flex"
+  className="btn btn-outline-primary btn-rounded col-sm-1 col-xs-1 col-md-1 col-lg-1 "
   data-mdb-ripple-color="dark" onClick={() => {
                     router.push({
                     pathname: `/pokemon/${p}`,
