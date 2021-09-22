@@ -33,7 +33,7 @@ align-tracks: center;
     background-color: transparent;
     width: 300px;
     height: auto;
-    border: 0px solid #f1f1f1;
+    border: 1px solid #747171;
    perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   

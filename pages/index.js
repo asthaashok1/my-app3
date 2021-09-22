@@ -156,16 +156,13 @@ const myChangeHandler = (e) =>
   //image={p.sprites.other.dream_world.front_default}
   //types={p.types[0].type.name}
   //key={index}
-  <Card className="main bg1 " key= {p} >
+  <Card className="main bg1 md-12 text-center text-3xl md:text-5xl xs:text-3xl xs:container-fluid " key= {p} >
     <div >
     
       <img src={p.sprites.other.dream_world.front_default} alt ={p.name} height="100" width="100"/>
-      <small>{p.types[0].type.name}</small>
-      
+      <small>{p.types[0].type.name}</small> 
       <h4>{p.name}</h4>
-    
-
-      </div>
+  </div>
       </Card>
   )}
   
