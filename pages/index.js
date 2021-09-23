@@ -103,7 +103,7 @@ const myChangeHandler = (e) =>
         <link rel="icon" href="/favicon.ico" />
      </Head>
      
-     <header className="col-md-12 mb-4  d-flex bg-red-500  justify-content-center">
+     <header className="col-md-12 mb-4  d-flex bg-red  justify-content-center">
    
    <h1 className="md-12 text-center text-3xl md:text-5xl text-success">Lets Play with Pokemon</h1> 
     
@@ -112,32 +112,34 @@ const myChangeHandler = (e) =>
       </link>
 
 
-      <div id="search-box" className="bg-primary p-1">
-          <div className="row m-0">
+      <div id="search-box" className="container-fluid bg-primary px-0">
+          <div className="row">
 
-              <div className="col-sm-3 text-center p-3">
-                <img src="\pkmn.png" className="img-fluid  w-100" style={{color: "red"}}>
+              <div className="col-3 text-center p-3">
+                <img src="\pkmn.png" className="img-fluid" style={{color: "red"}}>
                 </img>
               </div>
             
-              <div className="col-md-9">
+            <div className="col-md-6 col-7">
               
-              <form className="mb-0  d-flex justify-content-center align-items-center h-100 w-600"  onSubmit= {searchPokemon } >
-								<div>
+              <form className="d-flex justify-content-center align-items-center h-auto w-100"  onSubmit= {searchPokemon } >
+								
                
 									<input id="search_name" type="text" name="searchelemet"  placeholder="Enter Pokemon Name" onChange={ myChangeHandler } value = {query} ></input>
 
                   <button type="button" className="btn btn-primary" onClick={searchPokemon}>
                  <i className="fa fa-search"></i>
                  </button>
-                
-                 <button type="button" className="btn btn-rounded btn-success align-items-center"  onClick={goTo}>
-                  <i className="fa fa-th-list pr-2" aria-hidden="true" ></i>pokemon list</button>
+								
+                <div className="col-2 p-3">
+                  <button type="button" className="btn btn-rounded btn-success align-items-center"  onClick={goTo}>
+                  <i className="fa fa-th-list" aria-hidden="true" ></i></button>
 
-								</div>
-                	</form>
+                </div>
+              </form>
+                 
             
-              </div>
+            </div>
   
           </div>
          
@@ -145,8 +147,8 @@ const myChangeHandler = (e) =>
 
 
 
-
-<div className="App md-12 text-center text-3xl md:text-5xl">
+<div className="row">
+<div className="App md-12 text-center text-3xl md:text-5xl ">
 
 <ScrollMenu className="flex">
 {pokemon.map((p)=>
@@ -156,7 +158,7 @@ const myChangeHandler = (e) =>
   //image={p.sprites.other.dream_world.front_default}
   //types={p.types[0].type.name}
   //key={index}
-  <Card className="main bg1 md-12 text-center text-3xl md:text-5xl xs:text-3xl xs:container-fluid " key= {p} >
+  <Card className="main bg1 md-12 text-center text-3xl md:text-5xl  xs:wd-49 xs:text-3xl xs:container-fluid " key= {p} >
     <div >
     
       <img src={p.sprites.other.dream_world.front_default} alt ={p.name} height="100" width="100"/>
@@ -168,27 +170,31 @@ const myChangeHandler = (e) =>
   
   </ScrollMenu>
   </div>
-
-      
+  </div>
+  <div className="row"> 
+  <div className="col-sm-3">
   {pokemon1?.sprites && (
 
-    <div className="flip-box">
-  <div className="flip-box-inner">
-    <div className="flip-box-front">
+
+      <div className="flip-box">
+      <div className="flip-box-inner">
+      <div className="flip-box-front">
     
-      <img src={pokemon1.sprites.front_default} alt="Pokemon" style={{width: "200px"},{height:"200px"}}/>
-    </div>
-    <div className="flip-box-back">
-    <H1> Name : {pokemon1.name}</H1>
-    <My>
-  {pokemon1?.types?.length > 0  && 
-  pokemon1.types.map((t) => <small key= {t}>Type : {t.type.name}</small>)}
+            <img src={pokemon1.sprites.front_default} alt="Pokemon" style={{width: "200px"},{height:"200px"}}/>
+      </div>
+      <div className="flip-box-back">
+            <H1> Name : {pokemon1.name}</H1>
+              <My>
+                    {pokemon1?.types?.length > 0  && 
+                    pokemon1.types.map((t) => <h6 key= {t}>Type : {t.type.name}</h6>)}
  
- </My> 
-    </div>
-  </div>
-</div>
+               </My> 
+      </div>
+      </div>
+      </div>
 )}
+ </div> 
+    </div>
     </div>
   )
 }
