@@ -34,14 +34,14 @@ const fetchPokemon=()=>{
     .then(response=>response.json())
     .then(data=>{
       createPokemonObject(data.results)
-    console.log(data.results)})
+    console.log(data.results)}).catch((err)=>{<h1>Something went wrong</h1>})
 
 function createPokemonObject(result){
 
   result.forEach((pokemn) => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemn.name}`)
   .then(response=>response.json())
-  .then(data=>{setPokemon(currenList=>[...currenList,data])}) 
+  .then(data=>{setPokemon(currenList=>[...currenList,data])}).catch((err)=>{<h1>Something went wrong</h1>}) 
   });
 }
 
@@ -67,7 +67,7 @@ const router = useRouter()
 
 
 
-
+  
 const searchPokemon = (e) =>
 {
   e.preventDefault();
@@ -79,7 +79,10 @@ const searchPokemon = (e) =>
   .then(data => {
     console.log(data.results)
     setPokemon1(data)
-  });
+  }).catch((err)=>
+  {
+    alert("No such pokemon exist");
+  })
 
   
 }
@@ -90,8 +93,8 @@ const myChangeHandler = (e) =>
   setQuery (e.currentTarget.value)
 }
 
-  return (
 
+  return (
 
  <div className={styles.container}>
 
@@ -105,7 +108,7 @@ const myChangeHandler = (e) =>
      
      <header className="col-md-12 mb-4  d-flex bg-red  justify-content-center">
    
-   <h1 className="md-12 text-center text-3xl md:text-5xl text-success">Lets Play with Pokemon</h1> 
+   <h1 className="md-12 text-center text-4xl md:text-5xl text-success">Lets Play with Pokemon</h1> 
     
  </header>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -115,7 +118,7 @@ const myChangeHandler = (e) =>
       <div id="search-box" className="container-fluid bg-primary px-0">
           <div className="row">
 
-              <div className="col-3 text-center p-3">
+              <div className="col-2  text-center p-3">
                 <img src="\pkmn.png" className="img-fluid" style={{color: "red"}}>
                 </img>
               </div>
@@ -131,7 +134,7 @@ const myChangeHandler = (e) =>
                  <i className="fa fa-search"></i>
                  </button>
 								
-                <div className="col-2 p-3">
+                <div className="col-1 p-3">
                   <button type="button" className="btn btn-rounded btn-success align-items-center"  onClick={goTo}>
                   <i className="fa fa-th-list" aria-hidden="true" ></i></button>
 
@@ -147,8 +150,8 @@ const myChangeHandler = (e) =>
 
 
 
-<div className="row">
-<div className="App md-12 text-center text-3xl md:text-5xl ">
+<div className="row   max-w-sm sm:max-w-xl ">
+<div className=" text-center text-xl md:text-sm ">
 
 <ScrollMenu className="flex">
 {pokemon.map((p)=>
@@ -158,7 +161,7 @@ const myChangeHandler = (e) =>
   //image={p.sprites.other.dream_world.front_default}
   //types={p.types[0].type.name}
   //key={index}
-  <Card className="main bg1 md-12 text-center text-3xl md:text-5xl  xs:wd-49 xs:text-3xl xs:container-fluid " key= {p} >
+  <Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " key= {p} >
     <div >
     
       <img src={p.sprites.other.dream_world.front_default} alt ={p.name} height="100" width="100"/>
@@ -173,6 +176,7 @@ const myChangeHandler = (e) =>
   </div>
   <div className="row"> 
   <div className="col-sm-3">
+
   {pokemon1?.sprites && (
 
 

@@ -7,8 +7,8 @@ align-tracks: center;
 }
 .main
 {
-    width: 100%;
-    height:30vh;
+  width: 100%;
+    height:auto;
     display: flex;
     justify-content: center;
     align-items: center;
