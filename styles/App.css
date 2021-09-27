@@ -117,8 +117,4 @@ align-tracks: center;
       text-decoration:none;
       }
 
-      .back_img{
-       background-image: url('/pkmn.png') ; 
-       background-size: cover;
-       background-color: wheat;
-      }
+      

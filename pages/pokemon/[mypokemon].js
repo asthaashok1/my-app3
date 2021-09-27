@@ -25,6 +25,7 @@ const PokemonPage = ({name, pokemon, error}) => {
         <Image className="img-fluid" src='/pkmn.png' alt="Pokemon" width={100} height={77} />
         <Card>
            <h1 className="text-success">SELECTED POKEMON</h1>
+           <h3 className="text-primary">Different Images</h3>
        </Card>
         </header>
         <H1> {pokemon?.name}</H1>
