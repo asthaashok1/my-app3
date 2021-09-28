@@ -16,7 +16,8 @@ const EmployeePage=(props)=>{
         .then(response => response.json())
         .then(data => {
           setPokemon(data.results.map(p => p.name))
-        });
+        }).catch((err)=>
+            <h1>Some thing Went Wrong</h1>);
       }
       
 useEffect( ()=>
@@ -28,17 +29,8 @@ useEffect( ()=>
 
 
            return(
-             /*
-             <div className="justify-content-center"  >
-              <div>
-            {pokemon.map(p => (
-             
-                <div key= {p} className="d-flex  btn btn-outline-dark btn-rounded col-sm-1 col-xs-1 col-md-1 col-lg-1 " >
-                 
-                     <button  type="button"
-  className="object-contain"  onClick={() => {
-             */
-            <div className="img-fluid"  >
+            
+            <div className="min-h-screen sm:bg-blue-200  bg-red-200"  >
               <div>
             {pokemon.map(p => (
              

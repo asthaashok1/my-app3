@@ -12,6 +12,7 @@ align-tracks: center;
     display: flex;
     justify-content: center;
     align-items: center;
+
    /* margin-block-end: 1ch; */
     margin-top: 3ch;  
 }
@@ -25,17 +26,19 @@ align-tracks: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+     align-items: center;
     box-shadow: 0 15px 45px black;
 }
 
 .flip-box {
+  
     background-color: transparent;
     width: 300px;
     height: auto;
     border: 1px solid #747171;
    perspective: 1000px; /* Remove  if i don't want the 3D effect */
    margin-top: 2ch;
+ 
   }
   
   /* This container is needed to position the front and back side */

@@ -106,7 +106,7 @@ const myChangeHandler = (e) =>
         <link rel="icon" href="/favicon.ico" />
      </Head>
      
-     <header className="col-md-12 mb-4  d-flex bg-red  justify-content-center">
+     <header className="d-flex bg-red  justify-content-center p-2">
    
    <h1 className="md-12 text-center text-4xl md:text-5xl text-success">Lets Play with Pokemon</h1> 
     
@@ -115,10 +115,10 @@ const myChangeHandler = (e) =>
       </link>
 
 
-      <div id="search-box" className="container-fluid bg-primary px-0">
+      <div id="search-box" className="container-fluid bg-primary ">
           <div className="row">
 
-              <div className="col-2  text-center p-3">
+              <div className="col-2 md:col-3  text-center p-1">
                 <img src="\pkmn.png" className="img-fluid" style={{color: "red"}}>
                 </img>
               </div>
@@ -134,8 +134,8 @@ const myChangeHandler = (e) =>
                  <i className="fa fa-search"></i>
                  </button>
 								
-                <div className="col-1 p-3">
-                  <button type="button" className="btn btn-rounded btn-success align-items-center"  onClick={goTo}>
+                <div className="col-1 p-2">
+                  <button type="button" className="btn btn-rounded btn-success"  onClick={goTo}>
                   <i className="fa fa-th-list" aria-hidden="true" ></i></button>
 
                 </div>
@@ -149,32 +149,28 @@ const myChangeHandler = (e) =>
       </div>
 
 
-
-<div className="row   max-w-sm sm:max-w-xl ">
-<div className=" text-center text-xl md:text-sm ">
-
-<ScrollMenu className="flex">
-{pokemon.map((p)=>
+<div>
+<div className=" justify-content-center align-items-center max-w-lg sm:bg-red-300 lg:max-w-sm p-2 ">
+<ScrollMenu >
+  {pokemon.map((p)=>
   
-  //id={p.id}
-  //name={p.name}
-  //image={p.sprites.other.dream_world.front_default}
-  //types={p.types[0].type.name}
-  //key={index}
   <Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " key= {p} >
-    <div >
+    
     
       <img src={p.sprites.other.dream_world.front_default} alt ={p.name} height="100" width="100"/>
       <small>{p.types[0].type.name}</small> 
       <h4>{p.name}</h4>
-  </div>
-      </Card>
-  )}
   
-  </ScrollMenu>
+      </Card>
+      
+     
+  )}
+   </ScrollMenu>
+ 
   </div>
   </div>
-  <div className="row"> 
+  
+  <div className="row d-flex  justify-content-center"> 
   <div className="col-sm-3">
 
   {pokemon1?.sprites && (
@@ -183,7 +179,7 @@ const myChangeHandler = (e) =>
       <div className="flip-box">
       <div className="flip-box-inner">
       <div className="flip-box-front">
-    
+            <small className="text-cyan">I can Flip</small>
             <img src={pokemon1.sprites.front_default} alt="Pokemon" style={{width: "200px"},{height:"200px"}}/>
       </div>
       <div className="flip-box-back">
