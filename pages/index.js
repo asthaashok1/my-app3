@@ -22,15 +22,13 @@ export default function Home() {
   
 const fetchPokemon=()=>{
 
-  //fetch('https://pokeapi.co/api/v2/pokemon')
+  //fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
   //.then(response => response.json())
   //.then(data => {
     //console.log(data.results)
     //setPokemon(data.results.map(p => p.name))
   //});
-
-
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
+  fetch('https://pokeapi.co/api/v2/pokemon?offset=20&limit=20')
     .then(response=>response.json())
     .then(data=>{
       createPokemonObject(data.results)
@@ -150,7 +148,7 @@ const myChangeHandler = (e) =>
 
 
 <div>
-<div className=" justify-content-center align-items-center max-w-lg sm:bg-red-300 lg:max-w-sm p-2 ">
+<div className=" justify-content-center align-items-center max-w-lg sm:bg-red-300 lg:max-w-md p-2 ">
 <ScrollMenu >
   {pokemon.map((p)=>
   

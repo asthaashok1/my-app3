@@ -12,7 +12,6 @@ align-tracks: center;
     display: flex;
     justify-content: center;
     align-items: center;
-
    /* margin-block-end: 1ch; */
     margin-top: 3ch;  
 }

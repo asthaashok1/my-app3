@@ -13,14 +13,15 @@ const PokemonPage = ({name, pokemon, error}) => {
    
 
     return error ?
-
+    
     <div><h1 className="text-success">Pokemon Not Found</h1>
     
     
-    </div>:   
+    </div>: 
+    <Bckclr>  
     <div align="center">
         
-        <Bckclr>
+      
             <header className=" d-flex justify-content-center">
         <Image className="img-fluid" src='/pkmn.png' alt="Pokemon" width={100} height={77} />
         <Card>
@@ -35,36 +36,39 @@ const PokemonPage = ({name, pokemon, error}) => {
         </My>
 
         {pokemon?.sprites && (
-            <div className="App">
+           
+<div className="App d-flex justify-content-center align-items-center">
+
 <ScrollMenu>
     
     <div className="main bg1">
-    <Img src = {pokemon.sprites.front_default} height="300"/>
+    <Img src = {pokemon.sprites.front_default} height="500"/>
+    <div><small></small></div>
     </div>
     <div className="main bg1">
-    <Img src = {pokemon.sprites.front_shiny} height="300" />
+    <Img src = {pokemon.sprites.front_shiny} height="500" />
     </div>
     <div className="main bg1">
-    <Img src = {pokemon.sprites. front_female}  height="300"/>
+    <Img src = {pokemon.sprites. front_female}  height="500"/>
      </div>
         
      <div className="main bg1">
-     <Img src = {pokemon.sprites.back_default}   height="300" />
+     <Img src = {pokemon.sprites.back_default}   height="500" />
      </div>
      <div className="main bg1">
-     <Img src = {pokemon.sprites.back_shiny}  height="300"/>
+     <Img src = {pokemon.sprites.back_shiny}  height="500"/>
      </div>
      <div className="main bg1">
-     <Img src = {pokemon.sprites.back_female} height="300"/>
+     <Img src = {pokemon.sprites.back_female} height="500"/>
      </div>   
              
 </ScrollMenu>
         </div>
         )}
-        </Bckclr>
+    
         
             </div>
-    
+            </Bckclr>
     
 }
 
