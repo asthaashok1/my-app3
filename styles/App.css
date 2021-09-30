@@ -4,12 +4,32 @@ width: 50vw;
 height:40vh;
 align-items: center;
 align-tracks: center;
+
 }
 .main
 {
-  width: 100%;
+    width: 100%;
     height:auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
+   /* margin-block-end: 1ch; */
+    margin-top: 3ch;  
+}
+
+.App2
+{
+width: 50vw;
+height:40vh;
+border: 1px solid #747171;
+display: flex;
+overflow-x: auto;
+}
+
+.main2
+{
+    width: 100%;
+    height:200px;
     justify-content: center;
     align-items: center;
    /* margin-block-end: 1ch; */
@@ -25,7 +45,7 @@ align-tracks: center;
     display: flex;
     justify-content: center;
     align-items: center;
-     align-items: center;
+    align-items: center;
     box-shadow: 0 15px 45px black;
 }
 

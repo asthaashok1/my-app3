@@ -8,7 +8,7 @@ import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 const H1 = styled.h1`color: primary;`
  const My = styled.li`color: red;`
  const Bckclr = styled.body`background-color:powderblue;`
- const Img = styled.img`width:300;`;
+ const Img = styled.img`width:400;`;
 const PokemonPage = ({name, pokemon, error}) => {
    
 
@@ -39,29 +39,58 @@ const PokemonPage = ({name, pokemon, error}) => {
            
 <div className="App d-flex justify-content-center align-items-center">
 
-<ScrollMenu>
+<ScrollMenu >
     
-    <div className="main bg1">
-    <Img src = {pokemon.sprites.front_default} height="500"/>
-    <div><small></small></div>
-    </div>
-    <div className="main bg1">
-    <Img src = {pokemon.sprites.front_shiny} height="500" />
-    </div>
-    <div className="main bg1">
-    <Img src = {pokemon.sprites. front_female}  height="500"/>
-     </div>
-        
-     <div className="main bg1">
-     <Img src = {pokemon.sprites.back_default}   height="500" />
-     </div>
-     <div className="main bg1">
-     <Img src = {pokemon.sprites.back_shiny}  height="500"/>
-     </div>
-     <div className="main bg1">
-     <Img src = {pokemon.sprites.back_female} height="500"/>
-     </div>   
-             
+
+<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid "  >
+    
+    
+<small>front_
+            default</small>
+    <Img src = {pokemon.sprites.front_default} alt="Not exist" height="700"/>
+  
+</Card>
+
+    
+<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+    
+    
+<small>front_shiny</small>
+    <Img src = {pokemon.sprites.front_shiny} alt="Not exist" height="700" />
+  
+</Card>
+
+
+<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+    
+    
+<small>front_female</small>
+    <Img src = {pokemon.sprites.front_female} alt="Not exist" height="700"/>
+</Card>
+
+<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+    
+    
+<small>back_default</small>
+     <Img src = {pokemon.sprites.back_default}  alt="Not exist" height="700" />
+ 
+</Card>
+
+<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+    
+    
+<small>back_shiny</small>
+     <Img src = {pokemon.sprites.back_shiny} alt="Not exist" height="700"/>
+    
+</Card>
+
+<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+    
+<small>back_female</small>
+     <Img src = {pokemon.sprites.back_female} alt="Not exist" height="700"/>
+    
+
+</Card>          
 </ScrollMenu>
         </div>
         )}
