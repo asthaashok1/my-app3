@@ -56,7 +56,7 @@ const tomorePokemon = (e) =>
                     show more</button>
                     <button type="button" className="btn btn-rounded btn-success"  onClick={() => {
                     router.push({
-                    pathname: `/pokemonbuttonpage`,
+                    pathname: `/pokebtnpage`,
                     
                                   })
                                 }} >
