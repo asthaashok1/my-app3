@@ -16,7 +16,7 @@ const PokemonPagebtn = () => {
 
     const fetchPokemon=()=>{
 
-        fetch('https://pokeapi.co/api/v2/pokemon?offset=1&limit=1000')
+        fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1117')
         .then(response => response.json())
         .then(data => {
           setPokemon(data.results.map(p => p.name))
@@ -41,7 +41,7 @@ useEffect( ()=>
              router.push({
              pathname: `/pokemon/${p}`,
              
-                           })
+                  })
                          }}      
               >{p}</button>
               </div>

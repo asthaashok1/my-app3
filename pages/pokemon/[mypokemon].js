@@ -18,7 +18,8 @@ const PokemonPage = ({name, pokemon, error}) => {
     
     
     </div>: 
-    <Bckclr>  
+    <Bckclr> 
+        <div> 
     <div align="center">
         
       
@@ -34,15 +35,14 @@ const PokemonPage = ({name, pokemon, error}) => {
         {pokemon?.types?.length  && <small>Type : {pokemon?.types.map((t) => <ul key= {t}>{t.type.name}</ul>)}
         </small>}
         </My>
-
-        {pokemon?.sprites && (
+         {pokemon?.sprites && (
            
-<div className="App d-flex justify-content-center align-items-center">
+<div className="justify-content-center align-items-center max-w-lg sm:bg-red-300 lg:max-w-md p-2 ">
 
 <ScrollMenu >
     
 
-<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid "  >
+<Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid "  >
     
     
 <small>front_
@@ -52,7 +52,7 @@ const PokemonPage = ({name, pokemon, error}) => {
 </Card>
 
     
-<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+<Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
     
     
 <small>front_shiny</small>
@@ -61,14 +61,14 @@ const PokemonPage = ({name, pokemon, error}) => {
 </Card>
 
 
-<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+<Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
     
     
 <small>front_female</small>
     <Img src = {pokemon.sprites.front_female} alt="Not exist" height="700"/>
 </Card>
 
-<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+<Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
     
     
 <small>back_default</small>
@@ -76,7 +76,7 @@ const PokemonPage = ({name, pokemon, error}) => {
  
 </Card>
 
-<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+<Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid" >
     
     
 <small>back_shiny</small>
@@ -84,7 +84,7 @@ const PokemonPage = ({name, pokemon, error}) => {
     
 </Card>
 
-<Card className="main2 bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid " >
+<Card className="main bg1  text-center text-xl md:text-sm  xs:wd-49 xs:text-3xl xs:container-fluid" >
     
 <small>back_female</small>
      <Img src = {pokemon.sprites.back_female} alt="Not exist" height="700"/>
@@ -96,6 +96,13 @@ const PokemonPage = ({name, pokemon, error}) => {
         )}
     
         
+            </div>
+
+
+
+  
+
+            
             </div>
             </Bckclr>
     

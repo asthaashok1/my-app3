@@ -15,7 +15,7 @@ const EmployeePage=(props)=>{
 
     const fetchPokemon=()=>{
 
-        fetch('https://pokeapi.co/api/v2/pokemon?offset=1&limit=40')
+        fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=40')
         .then(response => response.json())
         .then(data => {
           setPokemon(data.results.map(p => p.name))

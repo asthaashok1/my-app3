@@ -28,7 +28,7 @@ const fetchPokemon=()=>{
     //console.log(data.results)
     //setPokemon(data.results.map(p => p.name))
   //});
-  fetch('https://pokeapi.co/api/v2/pokemon?offset=20&limit=20')
+  fetch('https://pokeapi.co/api/v2/pokemon?offset=1&limit=30')
     .then(response=>response.json())
     .then(data=>{
       createPokemonObject(data.results)
@@ -147,7 +147,7 @@ const myChangeHandler = (e) =>
       </div>
 
 
-<div>
+
 <div className=" justify-content-center align-items-center max-w-lg sm:bg-red-300 lg:max-w-md p-2 ">
 <ScrollMenu >
   {pokemon.map((p)=>
@@ -166,7 +166,7 @@ const myChangeHandler = (e) =>
    </ScrollMenu>
  
   </div>
-  </div>
+  
   
   <div className="row d-flex  justify-content-center"> 
   <div className="col-sm-3">
