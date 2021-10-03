@@ -39,7 +39,7 @@ const tomorePokemon = (e) =>
      setmorePokemon(data.results.map(p => p.name))
         }).catch((err)=>
             <h1>Some thing Went Wrong</h1>);
-      alert("HI")
+      
       }
 
 

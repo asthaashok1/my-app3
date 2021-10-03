@@ -79,7 +79,7 @@ const searchPokemon = (e) =>
     setPokemon1(data)
   }).catch((err)=>
   {
-    alert("No such pokemon exist");
+    alert("No such pokemon exist ");
   })
 
   
@@ -168,8 +168,8 @@ const myChangeHandler = (e) =>
   </div>
   
   
-  <div className="row d-flex  justify-content-center"> 
-  <div className="col-sm-3">
+  <div className="row "> 
+  <div className="d-flex  justify-content-center col-sm-3">
 
   {pokemon1?.sprites && (
 
